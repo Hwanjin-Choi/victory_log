@@ -1,0 +1,39 @@
+<style>
+  * {
+    font-size: 2rem;
+  }
+  input + span {
+    display: none;
+  }
+  input:checked + span {
+    display: inline-block;
+  }
+  input:checked + span + span {
+    display: none;
+  }
+  label:hover {
+    background-color: yellow;
+  }
+  label:active {
+    background-color: green;
+  }
+  input:focus {
+    background-color: aquamarine;
+  }
+</style>
+<body>
+  <input type="text" />
+  <label>
+    <input type="checkbox" />
+    <span style="color: green">선택O</span>
+    <span style="color: red">선택X</span>
+  </label>
+
+  <hr />
+
+  <label>
+    <input type="checkbox" />
+    <span style="color: green">선택O</span>
+    <span style="color: red">선택X</span>
+  </label>
+</body>

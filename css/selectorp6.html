@@ -1,0 +1,22 @@
+<style>
+  p {
+    max-width: 400px;
+    word-break: keep-all; /* 줄바꿈 기준 단어 */
+    background-color: lightcyan; /* 배경색 */
+  }
+  input:checked + label {
+    background-color: lightcyan; /* 체크된 radio 버튼 옆 label 배경색 변경 */
+  }
+</style>
+
+<body>
+  <p>밀폐된 포장식품 중에서 식중독이 발생했다면 주로 어떤 균에 의해서인가?</p>
+  <input type="radio" name="answer" id="a1" />
+  <label for="a1">살모넬라균</label><br />
+  <input type="radio" name="answer" id="a2" />
+  <label for="a2">대장균</label><br />
+  <input type="radio" name="answer" id="a3" />
+  <label for="a3">아리조나균</label><br />
+  <input type="radio" name="answer" id="a4" />
+  <label for="a4">클로스트리디움 보툴리늄균</label>
+</body>

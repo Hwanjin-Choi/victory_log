@@ -1,0 +1,40 @@
+<style>
+  li > div {
+    border: 1px solid red;
+  }
+  ul > li {
+    background-color: khaki;
+    list-style: armenian;
+  }
+  li > ul > li {
+    font-style: italic;
+    text-decoration: line-through;
+    list-style: none;
+  }
+  body > div {
+    font-size: 1.5rem;
+  }
+  li > ul {
+    padding-left: 15px;
+  }
+</style>
+
+<body>
+  <div>하위 / 자식 선택자</div>
+  <ul>
+    <li>
+      <div>Item 1</div>
+      <ul>
+        <li>Subitem A</li>
+        <li>Subitem B</li>
+      </ul>
+    </li>
+    <li>
+      <div>Item 2</div>
+      <ul>
+        <li>Subitem A</li>
+        <li>Subitem B</li>
+      </ul>
+    </li>
+  </ul>
+</body>

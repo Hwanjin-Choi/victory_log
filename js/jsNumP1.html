@@ -1,0 +1,20 @@
+<body>
+  <script>
+    //P1 23을 5로 나누었을 때의 몫과 나머지 구하기
+    let divide = parseInt(23 / 5);
+    let remainder = 23 % 5;
+    console.log(divide, remainder);
+
+    //P2 239초를 분과 초르 변환하기
+    let seconds = 239;
+    let minute = parseInt(seconds / 60);
+    let remainingSec = seconds - minute * 60;
+    console.log(minute, remainingSec);
+
+    //P3 한 페이지에 보여지는 게시물의 수가 10이고 17페이지의 게시물 시작 번호와 마지막 번호구하기
+    let n = 17; //starting page
+    let end = n * 10;
+    let start = end - 9;
+    console.log(end, start);
+  </script>
+</body>

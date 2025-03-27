@@ -1,0 +1,12 @@
+<body>
+  <script>
+    const str = "JavaScript";
+    // J a v a S c r i p t
+    // 0 1 2 3 4 5 6 7 8 9 index
+    console.log(str.substring(1, 5)); // start index 포함 + end index 미포함 1,2,3,4까지 프린트 e.g. avaS
+    console.log(str.slice(2)); // start index 부터의 글자를 잘라서프린트 2,3,4,5,6,7,8,9 e.g. vaScript
+    console.log(str.slice(3, 7)); // start index 부터의 end index 전까지 글자를 잘라서 프린트 3,4,5,6 e.g. aScr
+    console.log(str.indexOf("a", 2)); // str에서 parameter가 몇번째 index에 존재하는지, 없다면 -1 return
+    console.log(str.replace("Java", "Python")); // 앞에 string 존재하는지 체크 후 존재한다면 뒤에 string으로 변환 없다면 기본 단어 return
+  </script>
+</body>

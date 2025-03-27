@@ -1,0 +1,62 @@
+<style>
+  textarea {
+    resize: none; /* 크기고정 */
+    font-size: 1.2rem; /* 글자크기 */
+  }
+  textarea:hover {
+    background-color: lightgray;
+  }
+  textarea:focus {
+    background-color: lightpink;
+  }
+  .greeting::before {
+    content: "안녕하세요! ";
+    font-weight: bold;
+  }
+
+  .greeting::after {
+    content: "님.";
+    font-style: italic;
+  }
+  .box {
+    position: relative; /* ::before 또는 ::after를 absolute로 배치하기 위해 필요 */
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+
+  .box::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    border: 2px dashed blue;
+    z-index: -1; /* 박스 뒤에 배치 */
+  }
+  .speech-bubble {
+    position: relative;
+    background-color: #eee;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .speech-bubble::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 30px;
+    border-width: 10px;
+    border-style: solid transparent solid transparent;
+    border-color: #eee transparent transparent transparent;
+  }
+</style>
+
+<body>
+  <label for="pr">자기소개</label><br />
+  <textarea id="pr" name="pr" cols="15" rows="5"></textarea>
+
+  <span class="greeting">홍길동</span>
+  <div class="box">내용</div>
+  <div class="speech-bubble">안녕하세요!</div>
+</body>

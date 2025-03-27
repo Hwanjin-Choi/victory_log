@@ -1,0 +1,58 @@
+<style>
+  .wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px 100px 100px;
+  }
+  div > div {
+    background-color: rgb(207, 232, 220);
+    border: 2px solid rgb(79, 185, 227);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  #zero {
+    grid-column: 1 / 4;
+  }
+</style>
+<body>
+  <div class="wrapper">
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div id="zero">0</div>
+  </div>
+  <h1></h1>
+  <button onclick="back()">Back</button>
+
+  <script>
+    // 모든 div 선택
+    const btns = document.querySelectorAll("div > div");
+    for (const btn of btns) {
+      // 클릭된 div의 text를 h1에 추가
+      btn.addEventListener("click", (event) => {
+        const text = event.target.innerHTML;
+        document.querySelector("h1").innerHTML += text;
+      });
+    }
+    /* Back 버튼 기능 구현 */
+    function back() {
+      // 코드 작성
+      let currentNum = document.querySelector("h1").innerHTML;
+      let len = currentNum.length; //항상 마지막에 -1 abc면 3인데 c를 delete할라면 0, 2 (2 는 포함이 안되니 c삭제)
+
+      if (currentNum.length > 0) {
+        document.querySelector("h1").innerHTML = currentNum.substring(
+          0,
+          len - 1
+        );
+      }
+    }
+  </script>
+</body>

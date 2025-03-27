@@ -1,0 +1,61 @@
+<body>
+  <script>
+    let fTemp = 122;
+    let cTemp = ((fTemp - 32) * 5) / 9;
+    let num1 = 456;
+    let num2 = 12345;
+    // 각자리수 더하기
+    let n5 = num2 % 10;
+
+    function solution(n) {
+      var answer = 0;
+      n = n.toString();
+      for (let i = 0; i <= n.length - 1; i++) {
+        console.log(n[i]);
+        answer += Number(n[i]);
+      }
+      return answer;
+    }
+    solution(12345);
+
+    let score = 50;
+    let hasPortfolio = true;
+    let isPass = true;
+    if (score >= 60 && (hasPortfolio || isPass)) {
+      console.log("채용");
+    } else {
+      console.log("탈락");
+    }
+
+    const map = ["가위", "바위", "보"];
+    const player = 0;
+    const com = parseInt(Math.random() * 3);
+    console.log(`player: ${map[player]}, com: ${map[com]}`);
+    let result = "";
+    let playerChoice = map[player];
+    let comChoice = map[com];
+
+    /* 코드 */
+    if (playerChoice === comChoice) {
+      result = "무승부";
+    } else if (
+      (playerChoice === "가위" && comChoice === "보") ||
+      (playerChoice === "바위" && comChoice === "가위") ||
+      (playerChoice === "보" && comChoice === "바위")
+    ) {
+      result = "승리";
+    } else {
+      result = "패배";
+    }
+    console.log(`결과: ${result}`);
+
+    const date = new Date();
+    let hour = date.getHours() >= 10 ? date.getHours() : `0${date.getHours()}`;
+    let min =
+      date.getMinutes() >= 10 ? date.getMinutes() : `0${date.getMinutes()}`;
+    let sec =
+      date.getSeconds() >= 10 ? date.getSeconds() : `0${date.getSeconds()}`;
+
+    console.log("현재시각 : " + hour + "시 " + min + "분 " + sec + "초");
+  </script>
+</body>
