@@ -6,7 +6,6 @@ from bs4 import BeautifulSoup
 import time
 import re
 def get_dynamic_html(url):
-    print("hi")
     options = Options()
     options.add_argument("--headless")  # 브라우저 창을 열지 않음 (백그라운드 실행)
     options.add_argument("--no-sandbox")
